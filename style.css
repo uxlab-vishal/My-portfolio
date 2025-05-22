@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --color-bg: #FCFBF9;
+  --color-text: #111111;
+  --color-sub: #555555;
+  --color-accent1: #BFD9CE;
+  --color-accent2: #7E5AFF;
+  --color-border: #D8D6D1;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 1rem 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-bottom 0.2s;
+}
+.nav-link:hover {
+  border-bottom: 2px solid var(--color-text);
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.intro-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.section-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-sub);
+  transition: color 0.2s;
+}
+.section-link:hover {
+  color: var(--color-text);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.project-card {
+  background: var(--color-accent1);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card.highlight {
+  background: var(--color-accent2);
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--color-border);
+  border: 2px dashed var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+}
+.footer-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+.footer-nav a:hover {
+  color: var(--color-sub);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
