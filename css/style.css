@@ -1,99 +1,52 @@
-/* 1. Reset & Base */
+/* Reset & Base Styles */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
-}
-html {
-  font-size: 18px;
-  line-height: 1.6;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, sans-serif;
-  background: #FBFBF8;
-  color: #111;
-}
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
-
-/* 2. Container */
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* 3. Header & Nav */
-.site-header { padding: 1rem 0; }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  transition: opacity 0.2s;
-}
-.nav-link:hover { opacity: 0.7; }
-.logo {
-  font-family: serif;
-  font-size: 1.2rem;
-  font-weight: bold;
+body {
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
 }
 
-/* 4. Hero */
-.hero { text-align: center; margin-bottom: 3rem; }
+/* Custom Cursor */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #111;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
 .hero-title {
-  font-family: serif;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 8vw, 6rem);
+    margin-bottom: 1rem;
 }
-.hero-tagline { font-size: 1.1rem; color: #555; line-height: 1.4; }
-.hero-location { font-size: 0.9rem; color: #777; margin-top: 0.5rem; }
 
-/* 5. Timeline Entries */
-.work-section { padding-bottom: 3rem; }
-.timeline-entry { margin-bottom: 3rem; }
-.timeline-entry h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.25rem;
+/* Project Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
 }
-.timeline-entry h2 a:hover {
-  text-decoration: underline;
-  opacity: 0.7;
-}
-.role-date {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-.entry-desc { margin-bottom: 0.5rem; }
-.entry-meta { font-size: 0.85rem; color: #999; }
 
-/* 6. About Section */
-.about-intro,
-.about-hobby { margin-bottom: 1rem; color: #444; }
-.about h3 {
-  font-family: serif;
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+.project-card {
+    transition: transform 0.3s ease;
 }
-.meta-list li { margin-bottom: 0.5rem; }
 
-/* 7. Contact / Footer */
-.site-footer {
-  text-align: center;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid #DDD;
-}
-.cta { font-size: 1.1rem; margin-bottom: 0.5rem; }
-.email { display: inline-block; margin-bottom: 1.5rem; font-weight: 600; }
-.social-list li { margin-bottom: 0.5rem; }
-.credits { font-size: 0.85rem; color: #999; }
-
-/* 8. Responsive */
-@media (max-width: 480px) {
-  .hero-title { font-size: 2rem; }
-  .timeline-entry h2 { font-size: 1.2rem; }
-  .container { padding: 1rem; }
+.project-card:hover {
+    transform: translateY(-10px);
 }
