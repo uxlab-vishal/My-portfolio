@@ -1,123 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
-
-:root {
-  --color-bg: #FCFBF9;
-  --color-text: #111111;
-  --color-sub: #555555;
-  --color-accent1: #BFD9CE;
-  --color-accent2: #7E5AFF;
-  --color-border: #D8D6D1;
+/* 1. Reset & Base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.5;
+html {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  background: #FBFBF8;
+  color: #111;
 }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
 
+/* 2. Container */
 .container {
-  width: 90%;
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.site-header {
-  padding: 1rem 0;
-}
+/* 3. Header & Nav */
+.site-header { padding: 1rem 0; }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .nav-link {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-text);
-  transition: border-bottom 0.2s;
-}
-.nav-link:hover {
-  border-bottom: 2px solid var(--color-text);
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-text);
+  font-family: serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 0;
+/* 4. Hero */
+.hero { text-align: center; margin-bottom: 3rem; }
+.hero-title {
+  font-family: serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+.hero-tagline { font-size: 1.1rem; color: #555; line-height: 1.4; }
+.hero-location { font-size: 0.9rem; color: #777; margin-top: 0.5rem; }
+
+/* 5. Timeline Entries */
+.work-section { padding-bottom: 3rem; }
+.timeline-entry {
+  margin-bottom: 3rem;
+}
+.timeline-entry h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+.timeline-entry h2 a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+.role-date {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.entry-desc {
+  margin-bottom: 0.5rem;
+}
+.entry-meta {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* 6. About Section */
+.about-intro,
+.about-hobby {
   margin-bottom: 1rem;
+  color: #444;
 }
-.intro-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+.about h3 {
+  font-family: serif;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
-.section-link {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-sub);
-  transition: color 0.2s;
-}
-.section-link:hover {
-  color: var(--color-text);
+.meta-list li {
+  margin-bottom: 0.5rem;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 3rem 0;
-}
-.project-card {
-  background: var(--color-accent1);
-  padding: 1rem;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-card.highlight {
-  background: var(--color-accent2);
-}
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-
-.image-placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: var(--color-border);
-  border: 2px dashed var(--color-border);
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
+/* 7. Contact / Footer */
 .site-footer {
   text-align: center;
-  padding: 2rem 0;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #DDD;
 }
-.footer-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
+.cta {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.email {
+  display: inline-block;
+  margin-bottom: 1.5rem;
   font-weight: 600;
-  color: var(--color-text);
-  transition: color 0.2s;
 }
-.footer-nav a:hover {
-  color: var(--color-sub);
+.social-list li {
+  margin-bottom: 0.5rem;
+}
+.credits {
+  font-size: 0.85rem;
+  color: #999;
 }
 
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+/* 8. Responsive */
+@media (max-width: 480px) {
+  .hero-title { font-size: 2rem; }
+  .timeline-entry h2 { font-size: 1.2rem; }
+  .container { padding: 1rem; }
 }
