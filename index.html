@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Load GSAP for animations -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
@@ -13,50 +13,78 @@
     <!-- Custom Cursor -->
     <div class="cursor"></div>
 
-    <!-- Header -->
-    <header>
-        <nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
             <a href="#" class="logo">YourName</a>
             <div class="nav-links">
                 <a href="#work">Work</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1 class="hero-title">Designer & Developer</h1>
-        <p class="hero-subtitle">I create digital experiences with a focus on clean aesthetics.</p>
+        <div class="hero-content">
+            <h1 class="hero-title">Digital Designer<br>& Art Director</h1>
+            <p class="hero-location">Based in Your City</p>
+        </div>
     </section>
 
     <!-- Work Section -->
     <section id="work" class="work">
-        <h2>Selected Work</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="assets/images/project1.jpg" alt="Project 1">
-                <h3>Project Title</h3>
+        <div class="section-container">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="#" class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Title 1</h3>
+                        <p>Branding, Web Design</p>
+                    </div>
+                </a>
+                <!-- Add more projects as needed -->
             </div>
-            <!-- Repeat for other projects -->
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Your bio goes here...</p>
+        <div class="section-container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a designer specializing in digital experiences, branding, and art direction. With over X years of experience, I help brands communicate their vision through thoughtful design.</p>
+                    <p>My approach combines strategic thinking with aesthetic sensibility to create work that is both beautiful and effective.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/profile.jpg" alt="Your Name">
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <a href="mailto:you@example.com" class="email-link">you@example.com</a>
+        <div class="section-container">
+            <h2 class="section-title">Get in touch</h2>
+            <div class="contact-content">
+                <a href="mailto:you@example.com" class="email-link">you@example.com</a>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Behance</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Scripts -->
-    <script src="js/gsap-animations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
